@@ -1,0 +1,103 @@
+.wave-container {
+  display: flex;
+  flex-direction: column;
+  height: 15vw;
+  overflow: hidden;
+  background-color: #034075;
+  border-start-start-radius: 2vw;
+  border-start-end-radius: 2vw;
+  transition: transform 2s ease, background-color 5s ease;
+  justify-content: flex-end;
+  margin: 0 0.5vw 0 0.5vw;
+}
+.wave-container .main-title {
+  margin: 0;
+  font-size: 4em;
+  animation: rise 3s forwards;
+  font-family: "More Sugar", sans-serif;
+  color: #FFD400;
+  text-align: center;
+}
+@keyframes rise {
+  from {
+    transform: translateY(140%);
+  }
+  to {
+    transform: translateY(45%);
+  }
+}
+.wave-container .lower-wave,
+.wave-container .upper-wave {
+  display: flex;
+  flex-direction: row;
+}
+.wave-container .lower-wave {
+  height: 4vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: wave 3s infinite alternate;
+  transform: translate(20%, 20%);
+}
+.wave-container .upper-wave {
+  background-color: #3e9aeb;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: translate(-3%, 20%);
+}
+.wave-container #low-wave-element,
+.wave-container #up-wave-element {
+  border-radius: 50%;
+  animation-timing-function: linear;
+}
+.wave-container #low-wave-element {
+  background-color: #015FAF;
+  width: 7.5vw;
+  height: 6vw;
+  transform: translate(15%, 65%);
+}
+.wave-container #up-wave-element {
+  background-color: #3e9aeb;
+  width: 7.5vw;
+  height: 6vw;
+  animation: wave 3s infinite alternate;
+}
+.wave-container #low-wave-element::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  background-color: #4fadff;
+  width: 4.5vw;
+  height: 4vw;
+  bottom: 10%;
+  left: 17%;
+  animation: wave 1.5s infinite alternate;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-5%);
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  30% {
+    transform: translateY(-15%);
+  }
+  45% {
+    transform: translateY(-20%);
+  }
+  60% {
+    transform: translateY(-15%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=wave-style.css.map */

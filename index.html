@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/psyduck-icon.png">
+    <link href="https://fonts.cdnfonts.com/css/more-sugar" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/98f0a7a5de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet"  href="style/index-style.css">
+    <link rel="stylesheet" href="style/wave-style.css">
+    
+    <title>Psyduck!</title>
+</head>
+
+<body id="indexHome">
+    <header>
+        <div class="wave-container">
+        <h1 class="main-title">This is Psyduck!</h1>
+            <div id="lowerWave" class="lower-wave"></div>
+            <div id="upperWave" class="upper-wave"></div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="column">
+            <a id="list-element-1" href="#Description" onclick="loadPage(this.href)">Descrizione</a>
+            <a id="list-element-2" href="#Sprite-Evolution" onclick="returnToIndex()">Evoluzione <br> dello sprite</a>
+        </div>
+        <div class="img-container">
+            <img src="img/psyduck-icon.png" alt="psyduck-icon" class="psyduck-icon bounce-in-fwd-img ">
+        </div>
+        <div class="column">        
+            <a id="list-element-3" href="#stats">Statistiche</a>
+            <a id="list-element-4" href="#bonus">Bonus :)</a>
+        </div>
+    </nav>
+</body>
+
+<section id="Description"></section>
+<script src="js/bounce-in.js"></script>
+<script src="js/waveCreation.js"></script>
+<script src="js/loadPage.js"></script>
+</html>
